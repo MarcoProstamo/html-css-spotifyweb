@@ -372,6 +372,11 @@ body {
   justify-content: flex-end;
 }
 
+.col-setting .row {
+  width: 100%;
+  max-width: 200px;
+}
+
 .col-setting i {
   margin: 0 5px;
   font-size: 15px;
