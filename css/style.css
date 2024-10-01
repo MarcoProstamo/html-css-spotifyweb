@@ -440,4 +440,10 @@ body {
 
 /* * Large Device */
 @media screen and (min-width: 992px) {
+  .col-button > .row {
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+    height: 100%;
+  }
 }
