@@ -1,3 +1,70 @@
+/* ! Custom Prop */
+
+:root {
+  --player-width: 100%;
+  --player-height: 80px;
+
+  --sidebar-width: 80px;
+  --sidebar-height: calc(100vh - var(--player-height));
+
+  --call-to-action-height: 80px;
+
+  --main-width: calc(100vw - var(--sidebar-width));
+
+  --main-content-height: calc(
+    100vh - var(--call-to-action-height) - var(--player-height)
+  );
+}
+
+/* ! Layout */
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sidebar {
+  width: var(--sidebar-width);
+  height: var(--sidebar-height);
+}
+
+main {
+  width: var(--main-width);
+}
+
+.call-to-action {
+  width: var(--main-width);
+  height: var(--call-to-action-height);
+}
+
+.main-content {
+  width: var(--main-width);
+  height: var(--main-content-height);
+}
+
+.player {
+  width: var(--player-width);
+  height: var(--player-height);
+}
+
+/* ! Palette */
+
+.bg-black {
+  background-color: #000000;
+}
+
+.bg-darkblue {
+  background-color: #141922;
+}
+
+.bg-darkerblue {
+  background-color: #0e1115;
+}
+
+.bg-darkgray {
+  background-color: #252525;
+}
+
 /* ! Reset */
 
 * {
@@ -19,6 +86,10 @@ a {
 
 /* * Small Device */
 @media screen and (min-width: 576px) {
+  :root {
+    --sidebar-width: 300px;
+    --main-width: calc(100vw - var(--sidebar-width));
+  }
 }
 
 /* * Medium Device */
