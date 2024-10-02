@@ -238,6 +238,8 @@ body {
   padding: 10px 0;
 }
 
+/* ! Content */
+
 /* # Call to Action */
 
 .call-to-action {
@@ -252,11 +254,92 @@ body {
   border: 1px solid white;
   background-color: transparent;
   color: white;
-  padding: 10px 25px;
+  padding: 10px 20px;
   text-transform: uppercase;
   cursor: pointer;
   font-size: 20px;
 }
+
+.call-to-action button:hover {
+  font-size: 25px;
+}
+
+/* # Cards and Tabs */
+
+.main-content {
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.tabs > .row {
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+.main-content .tabs .tab {
+  font-size: 14px;
+  color: #888;
+  text-transform: uppercase;
+}
+
+.tabs .tab:hover {
+  cursor: pointer;
+  color: white;
+}
+
+.recent-songs {
+  margin-top: 40px;
+  color: white;
+  font-size: 18px;
+}
+
+.recent-songs .row {
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.recent-songs > h2 {
+  margin-bottom: 20px;
+}
+
+.recent-song {
+  text-align: center;
+  width: calc(50% - 32px);
+}
+
+.recent-song-image {
+  width: 100%;
+  aspect-ratio: 1;
+  margin-bottom: 15px;
+}
+
+.recent-song-title {
+  margin-bottom: 5px;
+}
+
+.recent-song-subtitle {
+  color: #888;
+}
+
+/* # Important */
+/* ! To Do: Change Classes Name ! */
+/* # Important */
+
+.recent-songs > .small-gray {
+  font-size: 12px;
+  color: #888;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.recent-songs > .no-margin {
+  margin-bottom: 0;
+}
+
+/* # Important */
+/* ! To Do: Change Classes Name ! */
+/* # Important */
 
 /* # Player */
 
@@ -336,6 +419,24 @@ body {
   height: 6px;
   background-color: #444;
   border-radius: 15px;
+  position: relative;
+}
+
+.progress-bar:hover::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: lime;
+  position: absolute;
+  top: 0%;
+  left: calc(100% * 0.3);
+  transform: translate(-50%, -25%);
+}
+
+.progress-bar:hover .progressed {
+  background-color: lime;
 }
 
 .progressed {
@@ -348,6 +449,10 @@ body {
   position: relative;
   top: -150%;
   left: 0%;
+}
+
+.progressed:hover {
+  background-color: lime;
 }
 
 .progress-bar-text {
@@ -441,6 +546,9 @@ body {
 
 /* * Medium Device */
 @media screen and (min-width: 768px) {
+  .recent-song {
+    width: calc(25% - 32px);
+  }
 }
 
 /* * Large Device */
@@ -450,5 +558,9 @@ body {
     gap: 15px;
     align-items: center;
     height: 100%;
+  }
+
+  .recent-song {
+    width: calc(100% / 6 - 32px);
   }
 }
