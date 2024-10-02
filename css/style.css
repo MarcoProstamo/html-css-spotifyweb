@@ -382,6 +382,14 @@ body {
   row-gap: 10px;
 }
 
+i.player-song-button.fa-regular.fa-heart:hover {
+  color: red;
+}
+
+i.player-song-button.fa-regular.fa-folder:hover {
+  color: orange;
+}
+
 .player-song-button {
   font-size: 20px;
   color: #a3a3a3;
