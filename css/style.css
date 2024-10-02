@@ -133,10 +133,21 @@ body {
   aspect-ratio: 1;
 }
 
+.logo {
+  cursor: pointer;
+}
+
 .menu i {
   display: block;
   padding: 10px 0;
   font-size: 25px;
+  cursor: pointer;
+  border-left: 2px solid transparent;
+}
+
+.menu i:hover {
+  color: white;
+  border-color: lime;
 }
 
 .menu i > span {
@@ -159,10 +170,19 @@ body {
   align-items: center;
 }
 
+.profile > .row:first-child:hover {
+  color: white;
+  cursor: pointer;
+}
+
 .profile .btn-download {
   display: inline-block;
   padding: 15px 0;
   width: 25px;
+}
+
+.profile .btn-download:hover {
+  color: white;
 }
 
 .profile .btn-profile {
@@ -172,6 +192,7 @@ body {
   background-color: #808080;
   border-radius: 50%;
   margin-bottom: 15px;
+  cursor: pointer;
 }
 
 .profile span {
@@ -213,6 +234,19 @@ body {
   border-radius: 50%;
 }
 
+.library-add-section:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.library-add-section:hover .library-add {
+  background-color: white;
+}
+
+.library-add:hover {
+  background-color: white;
+}
+
 .library-add-section {
   display: flex;
   align-items: center;
@@ -236,6 +270,11 @@ body {
 
 .library-body ul li {
   padding: 10px 0;
+}
+
+.library-body ul li:hover {
+  color: white;
+  cursor: pointer;
 }
 
 /* ! Content */
@@ -312,6 +351,7 @@ body {
   width: 100%;
   aspect-ratio: 1;
   margin-bottom: 15px;
+  position: relative;
 }
 
 .recent-song-title {
@@ -527,10 +567,10 @@ i.player-song-button.fa-regular.fa-folder:hover {
   .menu,
   .profile {
     text-align: left;
-    padding-left: 30px;
   }
 
   .profile {
+    padding-left: 30px;
     align-items: flex-start;
   }
 
@@ -544,6 +584,11 @@ i.player-song-button.fa-regular.fa-folder:hover {
     width: 200px;
     height: 50px;
     background-repeat: no-repeat;
+    margin-left: 30px;
+  }
+
+  .menu i {
+    padding-left: 30px;
   }
 
   /* Debug */
