@@ -357,9 +357,39 @@ body {
   margin-bottom: 20px;
 }
 
+.recent-song:hover::before {
+  content: "";
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  cursor: pointer;
+}
+
+.song-play-button {
+  display: none;
+  font-size: 40px;
+  color: #bbb;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.recent-song:hover .song-play-button {
+  display: block;
+}
+
 .recent-song {
   text-align: center;
   width: calc(50% - 32px);
+  position: relative;
+  height: fit-content;
 }
 
 .recent-song-image {
@@ -371,10 +401,12 @@ body {
 
 .recent-song-title {
   margin-bottom: 5px;
+  cursor: pointer;
 }
 
 .recent-song-subtitle {
   color: #888;
+  cursor: pointer;
 }
 
 /* # Important */
