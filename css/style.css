@@ -322,9 +322,24 @@ body {
   text-transform: uppercase;
 }
 
+.tabs .tab::after {
+  content: "";
+  display: block;
+  margin-top: 5px;
+  width: 40px;
+  border: 1px solid transparent;
+  border-radius: 25px;
+  position: relative;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+
+.tabs .tab:hover::after,
 .tabs .tab:hover {
   cursor: pointer;
   color: white;
+  border-color: lime;
 }
 
 .recent-songs {
