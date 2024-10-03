@@ -21,11 +21,13 @@
 .wrapper {
   display: flex;
   flex-wrap: wrap;
+  overflow: hidden;
 }
 
 .sidebar {
   width: var(--sidebar-width);
   height: var(--sidebar-height);
+  overflow: auto;
 }
 
 main {
@@ -261,6 +263,9 @@ body {
 .library-body {
   color: #a3a3a3;
   padding-left: 30px;
+  overflow: auto;
+  height: 200px;
+  margin-bottom: 32px;
 }
 
 .library-body ul {
